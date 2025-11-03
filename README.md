@@ -53,22 +53,22 @@ Aditional info on [DXVK's README section on HUD](https://github.com/doitsujin/dx
 
 Oops! These are not Launch Options for Proton, but rather for the native version of the game!
 
-The game runs great on Linux, constant 240 fps with vsync on on my machine. But a compatibility problem with **Wayland** made the video cutscenes run at half-speed, while their sound ran at normal speed, ruining the experience and even potentially spoiling what hadn't been shown on screen next.
+The game runs great on Linux, constant 240 fps with vsync on on my machine. But a compatibility problem with _Wayland_ made the video cutscenes run at half-speed, while their sound ran at normal speed, ruining the experience and even potentially spoiling what hadn't been shown on screen next.
 Fortunately, it seems that `STEAM_COMPAT_RUNTIME_SDL2=1` and `--force-vulkan` (not sure which, _and_ or _or_), manages to fix the issue.
 
-In **Game Properties**, **Compatibility**, check **"Force the use of a specific Steam Play compatibility tool"** and select **"Steam Linux Runtime 1.0 (scout)"**. Then in **General**, set your **Launch Options**.
+In _Game Properties_, _Compatibility_, check _"Force the use of a specific Steam Play compatibility tool"_ and select _"Steam Linux Runtime 1.0 (scout)"_. Then set your Launch Options in _General_.
 
 - `STEAM_COMPAT_RUNTIME_SDL2=1 MANGOHUD_CONFIG=vsync=2,fps_limit=240 mangohud gamemoderun %command% --force-vulkan`
 
 ### Shapez 2 (Native Linux)
 
-Oops! These also are for the native version of the game, who also appeared to have some problems wwith Wayland.
-I'm running this also with **"Steam Linux Runtime 1.0 (scout)"**.
+Oops! These also are for the native version of the game, who also appeared to have some problems with _Wayland_.
+I'm running this also with _"Steam Linux Runtime 1.0 (scout)"_.
 
 - `SDL_VIDEODRIVER=wayland gamescope -w 1920 -h 1080 -r 60 --mangoapp -f -- gamemoderun %command%`
 
 ### Misc
 
-Found this online and I'm not sure about the specifics. I'm yet to research these options and vkBasalt.
+Found this online and I'm not sure about the specifics. I'm yet to research these options and _vkBasalt_.
 
 - `VKD3D_FEATURE_LEVEL=12_1 PULSE_LATENCY_MSEC=60 DXVK_ASYNC=1 WINE_FULLSCREEN_FSR=1 ENABLE_VKBASALT=1 gamemoderun %command%`
