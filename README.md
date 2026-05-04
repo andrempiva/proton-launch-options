@@ -67,6 +67,17 @@ I'm running this also with _"Steam Linux Runtime 1.0 (scout)"_.
 
 - `SDL_VIDEODRIVER=wayland gamescope -w 1920 -h 1080 -r 60 --mangoapp -f -- gamemoderun %command%`
 
+### s&box
+
+Still figuring out what are the best options for this game. ProtonDB sugested:
+
+- `LD_PRELOAD="" gamescope --immediate-flips -r 60 --force-grab-cursor --mangoapp -- gamemoderun %command%`
+- `LD_PRELOAD="" gamescope -f -w 1920 -h 1080 --rt --immediate-flips -r 120 --hdr-enabled --force-grab-cursor --adaptive-sync --mangoapp -- gamemoderun %command%`
+
+And for the editor, they suggested to run this once. No idea if this is supposed to go into the Editor or the actual Game client Launch Options.
+
+- `protontricks -c "wine '$INSTALLER_PATH' /install /quiet /norestart && wine reg add 'HKEY_CURRENT_USER\Software\Wine\X11 Driver' /v 'Decorated' /t REG_SZ /d 'N' /f && wine reg add 'HKEY_CURRENT_USER\Control Panel\Desktop' /v 'FontSmoothing' /t REG_SZ /d '2' /f && wine reg add 'HKEY_CURRENT_USER\Control Panel\Desktop' /v 'FontSmoothingType' /t REG_DWORD /d 2 /f && wine reg add 'HKCU\Software\Wine\DllOverrides' /v comdlg32 /d native /f" 2129370`
+
 ### Misc
 
 Found this online and I'm not sure about the specifics. I'm yet to research these options and _vkBasalt_.
