@@ -66,6 +66,7 @@ Oops! These also are for the native version of the game, who also appeared to ha
 I'm running this also with _"Steam Linux Runtime 1.0 (scout)"_.
 
 - `SDL_VIDEODRIVER=wayland gamescope -w 1920 -h 1080 -r 60 --mangoapp -f -- gamemoderun %command%`
+- `SDL_VIDEODRIVER=wayland gamescope -w 1920 -h 1080 --mangoapp -f -- gamemoderun %command% -force-wayland`
 
 ### s&box
 
