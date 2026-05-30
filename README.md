@@ -79,6 +79,12 @@ And for the editor, they suggested to run this once. No idea if this is supposed
 
 - `protontricks -c "wine '$INSTALLER_PATH' /install /quiet /norestart && wine reg add 'HKEY_CURRENT_USER\Software\Wine\X11 Driver' /v 'Decorated' /t REG_SZ /d 'N' /f && wine reg add 'HKEY_CURRENT_USER\Control Panel\Desktop' /v 'FontSmoothing' /t REG_SZ /d '2' /f && wine reg add 'HKEY_CURRENT_USER\Control Panel\Desktop' /v 'FontSmoothingType' /t REG_DWORD /d 2 /f && wine reg add 'HKCU\Software\Wine\DllOverrides' /v comdlg32 /d native /f" 2129370`
 
+### Path of Exile 2
+
+Trying this out, I found out that `MANGOHUD=1` gives me no textures at all, only the hint of them lol:
+
+- `PROTON_ENABLE_WAYLAND=1 PROTON_ENABLE_NVAPI=1 DXVK_ENABLE_NVAPI=1 PROTON_USE_NTSYNC=1 __GL_THREADED_OPTIMIZATIONS=1 MANGOHUD=1 %command%`
+
 ### Misc
 
 Found this online and I'm not sure about the specifics. I'm yet to research these options and _vkBasalt_.
