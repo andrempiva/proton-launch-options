@@ -47,6 +47,12 @@ DXVK's native, zero-overhead overlay (bundled by Proton). Minimalist alternative
 
 Aditional info on [DXVK's README section on HUD](https://github.com/doitsujin/dxvk/blob/master/README.md#hud).
 
+### DXVK Framerate Limiter
+
+Found a way to limit the framerate FPS at the Direct3D level without overlays.
+
+- `DXVK_CONFIG="dxgi.maxFrameRate = 60; d3d9.maxFrameRate = 60" %command%`
+
 ## Games
 
 ### Hollow Knight: Silksong (Native Linux)
